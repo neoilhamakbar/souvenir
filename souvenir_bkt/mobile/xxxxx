@@ -1,0 +1,6 @@
+SELECT distinct id_angkot,nama,alamat, telp,st_x(st_centroid(geom)) as lng,st_y(st_centroid(geom)) as lat,st_distance_sphere(ST_GeomFromText('POINT("&Main.lngIK&" "&Main.latIK&")',-1), industrikecil.geom) as jarak FROM industrikecil where st_distance_sphere(ST_GeomFromText('POINT("&Main.lngIK&" "&Main.latIK&")',-1), industrikecil.geom) <= 1000 order by jarak"
+
+
+SELECT idik,namaik,alamatik,telpik, st_x(st_centroid(geom)) as lon,st_y(st_centroid(geom)) as lat,st_distance_sphere(ST_GeomFromText('POINT("&detailwisata.lonpilih&" "&detailwisata.latpilih&")',-1), industrikecil.geom) as jarak FROM industrikecil where st_distance_sphere(ST_GeomFromText('POINT("&detailwisata.lonpilih&" "&detailwisata.latpilih&")',-1), industrikecil.geom) <= 1000 order by jarak"
+
+SELECT id_angkot,jurusan, warna_angkot, jalur, st_x(st_centroid(geom)) as lon,st_y(st_centroid(geom)) as lat,st_distance_sphere(ST_GeomFromText('POINT("&detailIKJenis.lonpilih&" "&detailIKJenis.latpilih&")',-1), angkot.geom) as jarak FROM industrikecil where st_distance_sphere(ST_GeomFromText('POINT("&detailIKJenis.lonpilih&" "&detailIKJenis.latpilih&")',-1), industrikecil.geom) <= 1000 order by jarak"

@@ -1,0 +1,52 @@
+ $lat = $_GET['lat']; $lng = $_GET['lng']; $warna=$_GET['warna'];$id_angkot=$_GET['id_angkot'];$latsimpang=$_GET['latsimpang'];$lngsimpang=$_GET['lngsimpang'];
+
+ function init(){
+    var latlng = new google.maps.LatLng($lat, $lng); 
+    var myOptions = { 
+      zoom:14, center: latlng, mapTypeId: google.maps.MapTypeId.ROADMAP }; 
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);   
+
+      var objIK = new google.maps.Data();
+      objIK.loadGeoJson('industrikecil.php');
+
+      objIK.setStyle(function(feature){
+      return({
+            fillColor: 'green',
+            strokeColor: 'green',
+            strokeWeight: 3,
+            fillOpacity: 0.0
+          });
+      });
+      objIK.setMap(map); 
+
+      ja = new google.maps.Data();
+      ja.loadGeoJson('tampilkanrute.php?id_angkot=$id_angkot');
+      ja.setStyle(function(feature){
+      return({
+          fillColor: 'yellow',
+          strokeColor: '$warna',
+          strokeWeight: 3,
+          fillOpacity: 0.5
+          });          
+      });
+      ja.setMap(map);  
+
+        
+
+  var marker0 = new google.maps.Marker({ position: latlng,map: map,title: '', clickable:false, icon:''}); 
+  objIK.addListener('click', function(event){
+  infowindow.setContent(event.feature.getProperty('nama'));
+  infowindow.setPosition(event.latLng);
+  infowindow.open(map);
+  });
+
+  /*function calsimpang(){
+  var awal = new google.maps.LatLng(<?php echo'$lat , $lng'; ?>);
+  var akhir = new google.maps.LatLng(<?php echo'$latsimpang , $lngsimpang'; ?>);
+  var request = {origin:awal,destination:akhir,travelMode: google.maps.TravelMode.DRIVING};
+  directionsService.route(request, function(response, status) {if (status == google.maps.DirectionsStatus.OK) {directionsDisplay.setDirections(response);
+  //directionsDisplay = new google.maps.DirectionsRenderer({ draggable: false, polylineOptions: { strokeColor: "black" } });
+  directionsDisplay.setPanel(document.getElementById('infodirection'));
+  }});
+  }*/
+}

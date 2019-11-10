@@ -1,0 +1,20 @@
+<html>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNnzxae2AewMUN0Tt_fC3gN38goeLVdVE"></script>
+<script type="text/javascript">
+        function init(){
+            basemap();
+        }
+        function basemap()
+        {
+            map = new google.maps.Map(document.getElementById('map'), 
+                {
+                  zoom: 13,
+                  center: new google.maps.LatLng(-0.9154335, 100.4609481),
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+              });
+        }
+</script>
+<body onload='init()'>
+<div id='map' style="width: 100%; height: 100%;"></div>
+</body>
+</html>

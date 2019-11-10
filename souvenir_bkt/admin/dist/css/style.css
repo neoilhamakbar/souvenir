@@ -1,0 +1,33 @@
+.col-0{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.col-r-0{
+	padding-right: 0px;
+}
+.col-l-0{
+	padding-left: 0px;
+}
+#map{
+	height: 420px;
+}
+#map-canvas {
+	position:relative;
+}
+#floating-panel {
+    position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 5;
+	background-color: #fff;
+	padding: 1px;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+#latlng{
+	width: 200px;
+}
+.my-btn{
+	padding:0px 6px;
+	vertical-align: baseline;
+}
