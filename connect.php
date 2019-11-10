@@ -1,5 +1,5 @@
 <?php
-	$host = "user";
+	$host = "localhost";
 	$user = "root";
 	$pass = "1qaz2wsx3edc@";
 	$dbname = "bkt_tourism";
