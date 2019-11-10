@@ -38,7 +38,7 @@ require("../connect.php");
 
 <script type="text/javascript">
 
-var server = "http://13.76.171.120/bkt_tourism/souvenir_bkt/";
+var server = "http://webgissouvenir.ddns.net/bkt_tourism/souvenir_bkt/";
 var map;
 var markersDua = [];
 var koordinat = 'null'
