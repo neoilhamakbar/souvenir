@@ -721,6 +721,8 @@ function showDivs(n) {
                 var cp=row.cp;
                 var owner=row.owner;
                 var rating=row.rating;
+               var fasilitas_parkir=row.fasilitas_parkir;
+               var fasilitas_tempat_sholat=row.fasilitas_tempat_sholat;
                 var price = row.price;
                 var status = row.status;
                 var type = row.type;
