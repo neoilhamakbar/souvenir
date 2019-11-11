@@ -1792,7 +1792,7 @@ function ratinges()
   }
 }
 
-function fasilitas_parkirer()
+function fasilitas_parkires()
 {
   hapusawal();
   if (document.getElementById('fasilitas_parkir').value=="")
@@ -3871,7 +3871,7 @@ hapusawal();
                         </div>
                         
                         <div class=" form-group">
-                          <button type="submit" class="btn btn-info btn-block btn-flat" id="fasilitas_parkir" onclick='fasilitas_parkirer();'>Search</button>
+                          <button type="submit" class="btn btn-info btn-block btn-flat" id="fasilitas_parkir" onclick='fasilitas_parkires();'>Search</button>
                         </div>
                      </ul>
                     </li>
