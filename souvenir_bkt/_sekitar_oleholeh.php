@@ -29,11 +29,13 @@
                 $owner=$baris['owner'];
                 $cp=$baris['cp'];
                 $address=$baris['address'];
-                $rating=$rating['rating'];
+                $rating=$baris['rating'];
+		$fasilitas_parkir=$baris['fasilitas_parkir'];
+		$fasilitas_tempat_sholat=$baris['fasilitas_tempat_sholat'];
                 
                 $latitude=$baris['lat'];
                 $longitude=$baris['lng'];
-                $dataarray[]=array('id'=>$id,'name'=>$name,'cp'=>$cp,'address'=>$address,'rating'=>$rating, "latitude"=>$latitude,"longitude"=>$longitude);
+                $dataarray[]=array('id'=>$id,'name'=>$name,'cp'=>$cp,'address'=>$address,'rating'=>$rating,'fasilitas_parkir'=>$fasilitas_parkir,'fasilitas_tempat_sholat'=>$fasilitas_tempat_sholat, "latitude"=>$latitude,"longitude"=>$longitude);
             }
             echo json_encode ($dataarray);
 
