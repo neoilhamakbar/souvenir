@@ -436,6 +436,8 @@ function detailinfoik(id1)
             var owner=row.owner;
             var cp = row.cp;
             var rating = row.rating;
+	    var fasilitas_parkir = row.fasilitas_parkir;
+            var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
             var latitude  = row.latitude; ;
             var longitude = row.longitude ;
             centerBaru = new google.maps.LatLng(row.latitude, row.longitude);
@@ -1176,6 +1178,8 @@ function detsou1(id14433f){
             var address=row.address;
             var cp=row.cp;
             var rating=row.rating;
+	    var fasilitas_parkir=row.fasilitas_parkir;
+	    var fasilitas_tempat_sholat=row.fasilitas_tempat_sholat;
             var owner=row.owner;
            
             var price = row.price;
@@ -1695,6 +1699,8 @@ function cpes()
           var address   = row.address;
           var rating   = row.rating;
           var owner   = row.owner;
+	  var fasilitas_parkir = row.fasilitas_parkir;
+	  var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
 
           var id_status   = row.id_status;
           var lat  = row.latitude ;
@@ -1754,6 +1760,8 @@ function ratinges()
           var name   = row.name;
           var address   = row.address;
           var rating   = row.rating;
+	 var fasilitas_parkir = row.fasilitas_parkir;
+	 var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
           var owner   = row.owner;
           var id_status   = row.id_status;
           var lat  = row.latitude ;
@@ -1813,7 +1821,9 @@ function fasilitas_parkirer()
           var name   = row.name;
           var address   = row.address;
           var owner   = row.owner;
+	var rating = row.rating;
           var fasilitas_parkir = row.fasilitas_parkir;
+	 var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
           var id_status   = row.id_status;
           var lat  = row.latitude ;
           var lon = row.longitude ;
@@ -1872,7 +1882,9 @@ function fasilitas_tempat_sholates()
           var name   = row.name;
           var address   = row.address;
           var owner   = row.owner;
-           var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
+	  var rating = row.rating;
+ 	  var fasilitas_parkir = row.fasilitas_parkir;
+          var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
           var id_status   = row.id_status;
           var lat  = row.latitude ;
           var lon = row.longitude ;
