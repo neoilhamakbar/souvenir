@@ -125,7 +125,7 @@ session_start();
                   <section class="panel">
 
                     <header class="panel-heading">
-                      <h2 class="box-title" style="text-transform:capitalize;"><b> Detail Informasi</b></h2>
+                      <h2 class="box-title" style="text-transform:capitalize;"><b> Detail Information</b></h2>
                     </header>
 
                     <div class="panel-body">
@@ -747,7 +747,7 @@ function showDivs(n) {
 
                     // $('#hasilcaridet').append("<tr><td colspan='2'> "+product_souvenir+"</td><td> "+price+"</td></tr>");
                     if(i==0){
-                      $('#detgal').append("<tr><td>Nama</td><td>:</td><td> "+name+"</td></tr><br><tr><td>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td>Telepon</td><td>:</td><td> "+cp+"</td></tr><br><tr><td>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td>Owner</td><td>:</td><td> "+owner+"</td></tr><br><tr><td>Place's Status</td><td>:</td><td> "+status+"</td></tr><br><tr><td>Type</td><td>:</td><td> "+type+"</td></tr><tr><td><b> Product </b></td><td></td><td><b> Price </b></td></tr>");
+                      $('#detgal').append("<tr><td>Nama</td><td>:</td><td> "+name+"</td></tr><br><tr><td>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td>Telepon</td><td>:</td><td> "+cp+"</td></tr><br><tr><td>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td>Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td>Owner</td><td>:</td><td> "+owner+"</td></tr><br><tr><td>Place's Status</td><td>:</td><td> "+status+"</td></tr><br><tr><td>Type</td><td>:</td><td> "+type+"</td></tr><tr><td><b> Product </b></td><td></td><td><b> Price </b></td></tr>");
                     }
                     $('#detgal').append("<tr><td colspan='2'> "+dataproduct+"</td><td> "+price+"</td></tr>)");
 
