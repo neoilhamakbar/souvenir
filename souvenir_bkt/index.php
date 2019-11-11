@@ -3844,7 +3844,7 @@ hapusawal();
 
                     <li class="sub-menu">
                       <a href="javascript:;" >
-                      <i class="fa fa-field"></i>
+                      <i class="fa fa-car"></i>
                         <span>Lahan Parkir</span>
                       </a>
                       <ul class="sub">
@@ -3866,7 +3866,7 @@ hapusawal();
 
                     <li class="sub-menu">
                       <a href="javascript:;" >
-                      <i class="fa fa-mosque"></i>
+                      <i class="fas fa-mosque"></i>
                         <span>Tempat Sholat</span>
                       </a>
                       <ul class="sub">
