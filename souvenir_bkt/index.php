@@ -716,7 +716,7 @@ function detailinfosou(id14)
                     } 
             infowindow = new google.maps.InfoWindow({
             position: centerBaru,
-            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+namaa+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-car'></i>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-compass'></i>Fasilitas Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr></table></span>",   
+            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+namaa+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-car'></i>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-compass'></i>Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr></table></span>",   
             pixelOffset: new google.maps.Size(0, -33)
             });
           infoposisi.push(infowindow); 
@@ -1055,7 +1055,7 @@ function detsou(id14433){
                 // $('#hasilcaridet').append("<tr><td colspan='2'> "+product_souvenir+"</td><td> "+price+"</td></tr>");
             infowindow = new google.maps.InfoWindow({
             position: centerBaru,
-            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+name+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-car'></i>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-compass'></i>Fasilitas Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr><br><tr><td><i class='fa fa-clock-o'></i>Owner</td><td>:</td><td> "+owner+"</td></tr></table></span><br><input type='button' class='btn btn-success' value='Object Arround' onclick='tampil_sekitar(\""+latitude+"\",\""+longitude+"\",\""+name+"\")'<br>&nbsp&nbsp<input type='button' class='btn btn-success' value='More Information' onclick='gallery(\""+id+"\")'<br>&nbsp&nbsp <input type='button' class='btn btn-success' value='Route' onclick='callRoute(centerLokasi,centerBaru);rutetampil()' />",   
+            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+name+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-car'></i>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-compass'></i>Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr><br><tr><td><i class='fa fa-clock-o'></i>Owner</td><td>:</td><td> "+owner+"</td></tr></table></span><br><input type='button' class='btn btn-success' value='Object Arround' onclick='tampil_sekitar(\""+latitude+"\",\""+longitude+"\",\""+name+"\")'<br>&nbsp&nbsp<input type='button' class='btn btn-success' value='More Information' onclick='gallery(\""+id+"\")'<br>&nbsp&nbsp <input type='button' class='btn btn-success' value='Route' onclick='callRoute(centerLokasi,centerBaru);rutetampil()' />",   
             pixelOffset: new google.maps.Size(0, -33)
             });
           infoposisi.push(infowindow); 
@@ -1103,7 +1103,7 @@ function detsouxx(id14433){
             var cp=row.cp;
             var rating=row.rating;
             var fasilitas_parkir = row.fasilitas_parkir;
-            var tempat_sholat = row.tempat_sholat;
+            var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
             var owner=row.owner;
            
             var price = row.price;
@@ -3857,7 +3857,7 @@ hapusawal();
                     <li class="sub-menu">
                       <a href="javascript:;" >
                       <i class="fa fa-car"></i>
-                        <span>Lahan Parkir</span>
+                        <span>Tempat Parkir</span>
                       </a>
                       <ul class="sub">
                         <div class=" form-group"> <br>
