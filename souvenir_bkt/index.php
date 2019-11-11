@@ -716,7 +716,7 @@ function detailinfosou(id14)
                     } 
             infowindow = new google.maps.InfoWindow({
             position: centerBaru,
-            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+namaa+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-car'></i>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-compass'></i>Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr></table></span>",   
+            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+namaa+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-car'></i>Parking Facilities</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-compass'></i>Prayer Facilities</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr></table></span>",   
             pixelOffset: new google.maps.Size(0, -33)
             });
           infoposisi.push(infowindow); 
