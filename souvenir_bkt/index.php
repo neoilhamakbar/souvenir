@@ -3839,11 +3839,11 @@ hapusawal();
                           <!-- <label style="color: white;">Sub District</label> -->
                           <select class="form-control select2" style="width: 100%; height: 70%;" id="rating">
                             <option name="bintang" value="">-Choose-</option>
-                            <option name="bintang" value="1">1 Star</option>
-                            <option name="bintang" value="2">2 Stars</option>
-                            <option name="bintang" value="3">3 Stars</option>
-                            <option name="bintang" value="4">4 Stars</option>
-                            <option name="bintang" value="5">5 Stars</option>
+                            <option name="bintang" value="1 Star">1 Star</option>
+                            <option name="bintang" value="2 Stars">2 Stars</option>
+                            <option name="bintang" value="3 Stars">3 Stars</option>
+                            <option name="bintang" value="4 Stars">4 Stars</option>
+                            <option name="bintang" value="5 Stars">5 Stars</option>
                           </select>
                                               
                         </div>
