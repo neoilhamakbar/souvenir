@@ -18,13 +18,15 @@ while($row = mysqli_fetch_array($hasil))
 		$name=$row['name']; 
 		$address=$row['address'];
 		$rating=$row['rating'];
+		$fasilitas_parkir=$row['fasilitas_parkir'];
+		$fasilitas_tempat_sholat=$row['fasilitas_tempat_sholat'];
 		$longitude=$row['longitude'];
 		$latitude=$row['latitude'];
 		$tabel='sou';
 		// var_dump($row);
 		// die();
 		//   if ($longitude != null) {
-			$dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'longitude'=>$longitude,'latitude'=>$latitude,'tabel'=>$tabel);
+			$dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'fasilitas_parkir'=>$fasilitas_parkir,'fasilitas_tempat_sholat'=>$fasilitas_tempat_sholat,'longitude'=>$longitude,'latitude'=>$latitude,'tabel'=>$tabel);
 		//   }
 	}
 	
@@ -38,11 +40,13 @@ while($row = mysqli_fetch_array($hasil2))
 		  $name=$row['name']; 
 		  $address=$row['address'];
 		  $rating=$row['rating'];
+		  $fasilitas_parkir=$row['fasilitas_parkir'];
+		  $fasilitas_tempat_sholat=$row['fasilitas_tempat_sholat'];
 		  $longitude=$row['longitude'];
 		  $latitude=$row['latitude'];
 		  $tabel='ik';
 		  if($longitude !=null){
-			$dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'longitude'=>$longitude,'latitude'=>$latitude,'tabel'=>$tabel);
+			$dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'fasilitas_parkir'=>$fasilitas_parkir,'fasilitas_tempat_sholat'=>$fasilitas_tempat_sholat,'longitude'=>$longitude,'latitude'=>$latitude,'tabel'=>$tabel);
 		  }
 	}
 
