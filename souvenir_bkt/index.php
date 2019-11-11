@@ -687,7 +687,8 @@ function detailinfosou(id14)
             var namaa = row.name;
             var address=row.address;
             var cp = row.cp;
-            
+            var fasilitas_parkir = row.fasilitas_parkir;
+            var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
             var rating = row.rating;
             var owner = row.owner;
            
@@ -713,7 +714,7 @@ function detailinfosou(id14)
                     } 
             infowindow = new google.maps.InfoWindow({
             position: centerBaru,
-            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+namaa+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr></table></span>",   
+            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+namaa+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-car'></i>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-mosque'></i>Fasilitas Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr></table></span>",   
             pixelOffset: new google.maps.Size(0, -33)
             });
           infoposisi.push(infowindow); 
@@ -842,6 +843,8 @@ function viewsou()
           var name = row.name;
           var address=row.address;
           var rating=row.rating;
+          var fasilitas_parkir = row.fasilitas_parkir;
+          var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
           var lat=row.lat;
           var lon = row.lng;
           var tabel = row.tabel;
@@ -905,6 +908,8 @@ function detsousou(id144){
             var address=row.address;
             var cp=row.cp;
             var rating=row.rating;
+            var fasilitas_parkir = row.fasilitas_parkir;
+            var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
             var latitude  = row.latitude; ;
             var longitude = row.longitude ;
             centerBaru = new google.maps.LatLng(row.latitude, row.longitude);
@@ -953,6 +958,8 @@ $('#info').empty();
             var address=row.address;
             var cp=row.cp;
             var rating = row.rating;
+            var fasilitas_parkir = row.fasilitas_parkir;
+            var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
             var latitude  = row.latitude; ;
             var longitude = row.longitude ;
             var type = row.type ;
@@ -1018,6 +1025,8 @@ function detsou(id14433){
             var address=row.address;
             var cp=row.cp;
             var rating=row.rating;
+            var fasilitas_parkir = row.fasilitas_parkir;
+            var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
             var owner=row.owner;
            
             var price = row.price;
@@ -1044,7 +1053,7 @@ function detsou(id14433){
                 // $('#hasilcaridet').append("<tr><td colspan='2'> "+product_souvenir+"</td><td> "+price+"</td></tr>");
             infowindow = new google.maps.InfoWindow({
             position: centerBaru,
-            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+name+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr><br><tr><td><i class='fa fa-clock-o'></i>Owner</td><td>:</td><td> "+owner+"</td></tr></table></span><br><input type='button' class='btn btn-success' value='Object Arround' onclick='tampil_sekitar(\""+latitude+"\",\""+longitude+"\",\""+name+"\")'<br>&nbsp&nbsp<input type='button' class='btn btn-success' value='More Information' onclick='gallery(\""+id+"\")'<br>&nbsp&nbsp <input type='button' class='btn btn-success' value='Route' onclick='callRoute(centerLokasi,centerBaru);rutetampil()' />",   
+            content: "<center><span style=color:black><b>Information</b><table><tr><td><i class='fa fa-home'></i>Nama</td><td>:</td><td> "+name+"</td></tr><br><tr><td><i class='fa fa-map-marker'></i>Alamat</td><td>:</td><td> "+address+"</td></tr><br><tr><td><i class='fa fa-star'></i>Rating</td><td>:</td><td> "+rating+"</td></tr><br><tr><td><i class='fa fa-parking'></i>Fasilitas Parkir</td><td>:</td><td> "+fasilitas_parkir+"</td></tr><br><tr><td><i class='fa fa-mosque'></i>Fasilitas Tempat Sholat</td><td>:</td><td> "+fasilitas_tempat_sholat+"</td></tr><br><tr><td><i class='fa fa-phone'></i>Telepon</td><td>:</td><td> "+cp+"</td></tr><br><tr><td><i class='fa fa-clock-o'></i>Owner</td><td>:</td><td> "+owner+"</td></tr></table></span><br><input type='button' class='btn btn-success' value='Object Arround' onclick='tampil_sekitar(\""+latitude+"\",\""+longitude+"\",\""+name+"\")'<br>&nbsp&nbsp<input type='button' class='btn btn-success' value='More Information' onclick='gallery(\""+id+"\")'<br>&nbsp&nbsp <input type='button' class='btn btn-success' value='Route' onclick='callRoute(centerLokasi,centerBaru);rutetampil()' />",   
             pixelOffset: new google.maps.Size(0, -33)
             });
           infoposisi.push(infowindow); 
@@ -1091,6 +1100,8 @@ function detsouxx(id14433){
             var address=row.address;
             var cp=row.cp;
             var rating=row.rating;
+            var fasilitas_parkir = row.fasilitas_parkir;
+            var tempat_sholat = row.tempat_sholat;
             var owner=row.owner;
            
             var price = row.price;
@@ -1773,23 +1784,23 @@ function ratinges()
   }
 }
 
-function genderes()
+function fasilitas_parkirer()
 {
   hapusawal();
-  if (document.getElementById('genderes').value=="")
+  if (document.getElementById('fasilitas_parkir').value=="")
     {
       alert("Pilih Option Dahulu !");
     }
     else
     {
     $('#hasilcari').append("<thead><th class='centered'>Name</th><th class='centered' colspan='3'>Action</th></thead>");
-    var stat = document.getElementById('genderes').value;
+    var stat = document.getElementById('fasilitas_parkir').value;
     console.log(stat);
     $('#hasilcari').empty();
     $('#hasilpencarian').empty();
     $.ajax
     ({ 
-      url: server+'sou_genderes.php?gender='+stat, data: "", dataType: 'json', success: function(rows)
+      url: server+'sou_parkir.php?fasilitas_parkir='+stat, data: "", dataType: 'json', success: function(rows)
       { 
         if(rows==null)
         {
@@ -1802,6 +1813,66 @@ function genderes()
           var name   = row.name;
           var address   = row.address;
           var owner   = row.owner;
+          var fasilitas_parkir = row.fasilitas_parkir;
+          var id_status   = row.id_status;
+          var lat  = row.latitude ;
+          var lon = row.longitude ;
+          var tabel = row.tabel;
+          centerBaru = new google.maps.LatLng(lat, lon);
+          marker = new google.maps.Marker
+          ({
+            position: centerBaru,
+            map: map,
+            icon: "assets/img/souv.png",
+          });
+          markersDua.push(marker);
+          map.setCenter(centerBaru);
+          map.setZoom(14);
+          clickMarker(centerBaru, id);
+          console.log(id_status);
+          if (tabel == 'sou') {
+            $('#hasilcari').append("<tr><td>"+name+"</td><td><a role='button' class='btn btn-success' onclick='detsou(\""+id+"\");detsousou(\""+id+"\")'>Show</a></td><td><a role='button' class='btn btn-danger fa fa-taxi' onclick='souangkot(\""+id+"\")'></a></td></tr>");
+          } else {
+            $('#hasilcari').append("<tr><td>"+name+"</td><td><a role='button' class='btn btn-success' onclick='detsouxx(\""+id+"\");'>Show</a></td><td><a role='button' class='btn btn-danger fa fa-taxi' onclick='ikangkot(\""+id+"\")'></a></td></tr>");
+          }
+          // $('#hasilcari').append("<tr><td>"+name+"</td><td><a role='button' class='btn btn-success' onclick='detsou(\""+id+"\");detsousou(\""+id+"\");detsouxx(\""+id+"\");'>Show</a></td><td><a role='button' class='btn btn-danger fa fa-taxi' onclick='souangkot(\""+id+"\")'></a></td></tr>");
+        }   
+        // $('#hasilpencarian').append("<h5 class='box-title' id='hasilpencarian'>Result :</h5>"+rows.length);
+      }
+    }); 
+  }
+}
+
+function fasilitas_tempat_sholates()
+{
+  hapusawal();
+  if (document.getElementById('fasilitas_tempat_sholat').value=="")
+    {
+      alert("Pilih Option Dahulu !");
+    }
+    else
+    {
+    $('#hasilcari').append("<thead><th class='centered'>Name</th><th class='centered' colspan='3'>Action</th></thead>");
+    var stat = document.getElementById('fasilitas_tempat_sholat').value;
+    console.log(stat);
+    $('#hasilcari').empty();
+    $('#hasilpencarian').empty();
+    $.ajax
+    ({ 
+      url: server+'sou_pray.php?fasilitas_tempat_sholat='+stat, data: "", dataType: 'json', success: function(rows)
+      { 
+        if(rows==null)
+        {
+          alert('Data Did Not Exist !');
+        }
+        for (var i in rows)
+        {   
+          var row     = rows[i];
+          var id  = row.id;
+          var name   = row.name;
+          var address   = row.address;
+          var owner   = row.owner;
+           var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
           var id_status   = row.id_status;
           var lat  = row.latitude ;
           var lon = row.longitude ;
@@ -2837,6 +2908,8 @@ function oleholeh_sekitar(latitude,longitude,rad){ // OLEH-OLEH SEKITAR
               var owner = row.owner;
               var cp = row.cp;
               var rating=row.rating;
+               var fasilitas_parkir = row.fasilitas_parkir;
+                var fasilitas_tempat_sholat = row.fasilitas_tempat_sholat;
               var address = row.address;
               
               var lat=row.latitude;
@@ -3765,6 +3838,50 @@ hapusawal();
                         
                         <div class=" form-group">
                           <button type="submit" class="btn btn-info btn-block btn-flat" id="rating" onclick='ratinges();'>Search</button>
+                        </div>
+                     </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                      <a href="javascript:;" >
+                      <i class="fa fa-field"></i>
+                        <span>Lahan Parkir</span>
+                      </a>
+                      <ul class="sub">
+                        <div class=" form-group"> <br>
+                          <!-- <label style="color: white;">Sub District</label> -->
+                          <select class="form-control select2" style="width: 100%; height: 70%;" id="fasilitas_parkir">
+                            <option name="parkir" value="">-Choose-</option>
+                            <option name="parkir" value="1">Tersedia</option>
+                            <option name="parkir" value="2">Tidak Tersedia</option>
+                          </select>
+                                              
+                        </div>
+                        
+                        <div class=" form-group">
+                          <button type="submit" class="btn btn-info btn-block btn-flat" id="fasilitas_parkir" onclick='fasilitas_parkirer();'>Search</button>
+                        </div>
+                     </ul>
+                    </li>
+
+                    <li class="sub-menu">
+                      <a href="javascript:;" >
+                      <i class="fa fa-mosque"></i>
+                        <span>Tempat Sholat</span>
+                      </a>
+                      <ul class="sub">
+                        <div class=" form-group"> <br>
+                          <!-- <label style="color: white;">Sub District</label> -->
+                          <select class="form-control select2" style="width: 100%; height: 70%;" id="fasilitas_tempat_sholat">
+                            <option name="parkir" value="">-Choose-</option>
+                            <option name="parkir" value="1">Tersedia</option>
+                            <option name="parkir" value="2">Tidak Tersedia</option>
+                          </select>
+                                              
+                        </div>
+                        
+                        <div class=" form-group">
+                          <button type="submit" class="btn btn-info btn-block btn-flat" id="fasilitas_tempat_sholat" onclick='fasilitas_tempat_sholates();'>Search</button>
                         </div>
                      </ul>
                     </li>
