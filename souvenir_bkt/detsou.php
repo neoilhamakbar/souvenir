@@ -76,11 +76,11 @@ while($row = mysqli_fetch_array($hasil))
 		}
 
 
-		$dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'cp'=>$cp,'owner'=>$owner,'status'=>$status,'type'=>$type,'product_souvenir'=>$product_souvenir,'dataproduct'=>$dataproduct,'price'=>$price,'longitude'=>$longitude,'latitude'=>$latitude);
+		$dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'fasilitas_parkir'=>$fasilitas_parkir,'fasilitas_tempat_sholat'=>$fasilitas_tempat_sholat,'cp'=>$cp,'owner'=>$owner,'status'=>$status,'type'=>$type,'product_souvenir'=>$product_souvenir,'dataproduct'=>$dataproduct,'price'=>$price,'longitude'=>$longitude,'latitude'=>$latitude);
 		
 	}
 
-$querysearch2 ="select small_industry.id,small_industry.name,small_industry.address,small_industry.cp,small_industry.id_status,small_industry.id_industry_type,small_industry.owner,newtable.id_small_industry,newtable.price,ST_X(ST_Centroid(small_industry.geom)) AS lng, ST_Y(ST_CENTROID(small_industry.geom)) As lat, newtable.product_small_industry from (select detail_product_small_industry.id_small_industry,detail_product_small_industry.price, Group_Concat(product_small_industry.product, ', ') as product_small_industry from detail_product_small_industry join product_small_industry on product_small_industry.id = detail_product_small_industry.id_product where detail_product_small_industry.id_small_industry='$info' group by detail_product_small_industry.id_small_industry,detail_product_small_industry.price) as newtable join small_industry on small_industry.id = newtable.id_small_industry";
+$querysearch2 ="select small_industry.id,small_industry.name,small_industry.address,small_industry.cp,small_industry.rating,small_industry.fasilitas_parkir,small_industry.fasilitas_tempat_sholat,small_industry.id_status,small_industry.id_industry_type,small_industry.owner,newtable.id_small_industry,newtable.price,ST_X(ST_Centroid(small_industry.geom)) AS lng, ST_Y(ST_CENTROID(small_industry.geom)) As lat, newtable.product_small_industry from (select detail_product_small_industry.id_small_industry,detail_product_small_industry.price, Group_Concat(product_small_industry.product, ', ') as product_small_industry from detail_product_small_industry join product_small_industry on product_small_industry.id = detail_product_small_industry.id_product where detail_product_small_industry.id_small_industry='$info' group by detail_product_small_industry.id_small_industry,detail_product_small_industry.price) as newtable join small_industry on small_industry.id = newtable.id_small_industry";
 // echo $querysearch2;
 $hasil2=mysqli_query($conn, $querysearch2);
 while($row = mysqli_fetch_array($hasil2))
