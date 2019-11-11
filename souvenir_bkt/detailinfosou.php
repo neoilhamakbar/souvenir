@@ -23,7 +23,7 @@ $info = $_GET["info"];
 
 //$querysearch ="select souvenir.id, souvenir.name, souvenir.owner, souvenir.address, souvenir.cp, status.status, souvenir_type.name as nama, ST_X(ST_Centroid(souvenir.geom)) AS lng, ST_Y(ST_CENTROID(souvenir.geom)) As lat from souvenir join status on souvenir.id_status=status.id join souvenir_type on souvenir.id_souvenir_type=souvenir_type.id where souvenir.id='$info'";	   
 
-$querysearch ="SELECT souvenir.id, souvenir.name, souvenir.owner, souvenir.address,souvenir.rating, souvenir.cp from souvenir where souvenir.id='$info'";
+$querysearch ="SELECT souvenir.id, souvenir.name, souvenir.owner, souvenir.address,souvenir.rating,souvenir.fasilitas_parkir,souvenir.fasilitas_tempat_sholat, souvenir.cp from souvenir where souvenir.id='$info'";
 
 
 $hasil=mysqli_query($conn, $querysearch);
@@ -33,10 +33,12 @@ while($row = mysqli_fetch_array($hasil))
 		  $name=$row['name'];
 		  $owner=$row['owner'];
 		  $rating=$row['rating'];
+		  $fasilitas_parkir=$row['fasilitas_parkir'];
+	          $fasilitas_tempat_sholat=$row['fasilitas_tempat_sholat'];
 		  $address=$row['address'];
 		  $cp=$row['cp'];
 
-		  $dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'owner'=>$owner,'cp'=>$cp);
+		  $dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'fasilitas_parkir'=>$fasilitas_parkir,'fasilitas_tempat_sholat'=>$fasilitas_tempat_sholat,'owner'=>$owner,'cp'=>$cp);
 	}
 echo json_encode ($dataarray);
 ?>
