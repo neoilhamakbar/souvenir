@@ -3864,8 +3864,8 @@ hapusawal();
                           <!-- <label style="color: white;">Sub District</label> -->
                           <select class="form-control select2" style="width: 100%; height: 70%;" id="fasilitas_parkir">
                             <option name="parkir" value="">-Choose-</option>
-                            <option name="parkir" value="1">Available</option>
-                            <option name="parkir" value="2">Not Available</option>
+                            <option name="parkir" value="Tersedia">Available</option>
+                            <option name="parkir" value="Tidak Tersedia">Not Available</option>
                           </select>
                                               
                         </div>
@@ -3886,8 +3886,8 @@ hapusawal();
                           <!-- <label style="color: white;">Sub District</label> -->
                           <select class="form-control select2" style="width: 100%; height: 70%;" id="fasilitas_tempat_sholat">
                             <option name="sholat" value="">-Choose-</option>
-                            <option name="sholat" value="1">Available</option>
-                            <option name="sholat" value="2">Not Available</option>
+                            <option name="sholat" value="Tersedia">Available</option>
+                            <option name="sholat" value="Tidak Tersedia">Not Available</option>
                           </select>
                                               
                         </div>
