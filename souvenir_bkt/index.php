@@ -3885,9 +3885,9 @@ hapusawal();
                         <div class=" form-group"> <br>
                           <!-- <label style="color: white;">Sub District</label> -->
                           <select class="form-control select2" style="width: 100%; height: 70%;" id="fasilitas_tempat_sholat">
-                            <option name="parkir" value="">-Choose-</option>
-                            <option name="parkir" value="1">Tersedia</option>
-                            <option name="parkir" value="2">Tidak Tersedia</option>
+                            <option name="sholat" value="">-Choose-</option>
+                            <option name="sholat" value="1">Tersedia</option>
+                            <option name="sholat" value="2">Tidak Tersedia</option>
                           </select>
                                               
                         </div>
