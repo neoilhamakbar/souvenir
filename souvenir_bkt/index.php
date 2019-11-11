@@ -3866,7 +3866,7 @@ hapusawal();
 
                     <li class="sub-menu">
                       <a href="javascript:;" >
-                     <i class="fas fa-mosque"></i>
+                     <i class="far fa-kaaba"></i>
                         <span>Tempat Sholat</span>
                       </a>
                       <ul class="sub">
