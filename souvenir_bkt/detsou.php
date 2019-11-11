@@ -10,6 +10,8 @@ SELECT
     souvenir.address,
     souvenir.rating,
     souvenir.cp,
+    souvenir.fasilitas_parkir,
+    souvenir.fasilitas_tempat_sholat,
     souvenir.id_status,
     souvenir.id_souvenir_type,
     souvenir.owner,
@@ -41,6 +43,8 @@ while($row = mysqli_fetch_array($hasil))
 		  $name=$row['name'];
 		  $address=$row['address'];
 		  $rating=$row['rating'];
+		  $fasilitas_parkir=$row['fasilitas_parkir'];
+		  $fasilitas_tempat_sholat=$row['fasilitas_tempat_sholat'];
 		  $cp=$row['cp'];
 		  $owner=$row['owner'];		   
 		  $price=$row['price'];
@@ -85,6 +89,9 @@ while($row = mysqli_fetch_array($hasil2))
 		  $name=$row['name'];
 		  $address=$row['address'];
 		  $rating=$row['rating'];
+		  $fasilitas_parkir=$row['fasilitas_parkir'];
+	 	  $fasilitas_tempat_sholat=$row['fasilitas_tempat_sholat'];
+	 	  
 		  $cp=$row['cp'];
 		  $owner=$row['owner'];
 		  $price=$row['price'];
@@ -115,7 +122,7 @@ while($row = mysqli_fetch_array($hasil2))
 		  $type = 'Tenunan';
 		}
 
-		  $dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'cp'=>$cp,'owner'=>$owner,'status'=>$status,'type'=>$type,'close'=>$close,'product_small_industry'=>$product_small_industry,'dataproduct'=>$dataproduct,'price'=>$price,'longitude'=>$longitude,'latitude'=>$latitude);
+		  $dataarray[]=array('id'=>$id,'name'=>$name,'address'=>$address,'rating'=>$rating,'fasilitas_parkir'=>$fasilitas_parkir,'fasilitas_tempat_sholat'=>$fasilitas_tempat_sholat,'cp'=>$cp,'owner'=>$owner,'status'=>$status,'type'=>$type,'close'=>$close,'product_small_industry'=>$product_small_industry,'dataproduct'=>$dataproduct,'price'=>$price,'longitude'=>$longitude,'latitude'=>$latitude);
 	}	
 	
 echo json_encode ($dataarray);
