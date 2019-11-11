@@ -125,7 +125,7 @@ session_start();
                   <section class="panel">
 
                     <header class="panel-heading">
-                      <h2 class="box-title" style="text-transform:capitalize;"><b> Detail Information</b></h2>
+                      <h2 class="box-title" style="text-transform:capitalize;"><b> Details Information</b></h2>
                     </header>
 
                     <div class="panel-body">
@@ -166,7 +166,7 @@ session_start();
                     
                     ?>
                     <table class="table">
-                      <thead><th>Tanggal</th><th class="centered">Info</th></thead>
+                      <thead><th>Date</th><th class="centered">Info</th></thead>
                     <?php  
                       while ($rows = mysqli_fetch_array($result)) 
                         {
