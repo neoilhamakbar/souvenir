@@ -10,6 +10,8 @@
                 $id=$baris['id'];
                 $name=$baris['name'];
                 $rating=$baris['rating'];
+                 $fasilitas_parkir=$baris['fasilitas_parkir'];
+                 $fasilitas_tempat_sholat=$baris['fasilitas_tempat_sholat'];
                 $lat=$baris['lat'];
                 $lng=$baris['lng'];
                 $description=$baris['description'];
